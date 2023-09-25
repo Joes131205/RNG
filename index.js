@@ -17,12 +17,13 @@ randomButton.addEventListener("click", function() {
     if (min === "" || max === "") {
         return
     }
+
+    min = Number(min)
+    max = Number(max)    
     if (min > max) {
         num1.style.borderColor = "red"
         return
     }
-    min = Number(min)
-    max = Number(max)
     randomNumber.textContent = Math.floor(Math.random() * (max - min + 1)) + min
 })
 
